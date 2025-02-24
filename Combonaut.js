@@ -2237,11 +2237,11 @@ var endscreen_triggered = false;
 
 function check_barpos() {
 
-    if (current_amount >= 1000000) {
+    if (current_amount >= 9e999) {
 
         setTimeout(() => {
 
-            enable_deadly_check = true
+            enable_deadly_check = false
         
             
         }, 500);
@@ -2255,7 +2255,7 @@ setTimeout(() => {
 }, 50);
 
 
-    if (current_amount >= 1000000) {
+    if (current_amount >= 9e999) {
 
         r.style.setProperty("--skull_opacity", "100%");
 
@@ -2263,7 +2263,7 @@ setTimeout(() => {
     
     if (feverElement.offsetHeight === 0) {
 
-        if (current_amount > 1000000 && endscreen_triggered == false) {
+        if (current_amount > 9e999 && endscreen_triggered == false) {
 
             endscreen_triggered = true;
 
@@ -2366,7 +2366,7 @@ function increase_bar_strong() {
 
   function deadly_check() {
 
-        if (enable_deadly_check == true && current_amount > 1000000 && endscreen_triggered == false) {
+        if (enable_deadly_check == true && current_amount > 9e999 && endscreen_triggered == false) {
     
             setTimeout(() => {
 
